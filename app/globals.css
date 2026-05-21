@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --font-primary: var(--font-inter);
+  --font-heading: var(--font-playfair);
+
+  --color-gold: #c8a96b;
+  --color-dark: #111827;
+  --color-light: #f9fafb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: white;
+  color: var(--color-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+.section-padding {
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+.container-width {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #c8a96b, #e7d3a8);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #c8a96b, #e7d3a8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.card-shadow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.transition-smooth {
+  transition: all 0.3s ease;
+}
