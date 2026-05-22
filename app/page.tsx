@@ -29,7 +29,7 @@ export default function HomePage() {
       <About />
       <WhyChoose openPopup={() => setPopupOpen(true)} />
       <Projects openPopup={() => setPopupOpen(true)} />
-      <VisionMission />
+      {/* <VisionMission /> */}
       <Leadership />
       <Testimonials />
       {/* <Contact /> */}

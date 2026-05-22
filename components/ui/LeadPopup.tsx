@@ -108,7 +108,7 @@ export default function LeadPopup(
         <div
           className="relative min-h-[300px] bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/Main.jpg')",
+            backgroundImage: "url('/images/Landscape-1.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-black/50" />
