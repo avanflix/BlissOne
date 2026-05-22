@@ -11,17 +11,21 @@ export default function Projects({
     <section id="projects" className="section-padding bg-white">
       <div className="container-width">
         <SectionTitle
-          title="Featured Projects"
+          title=" Project"
           subtitle="Our Developments"
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid lg:grid-cols-1 gap-10">
           {projects.map((project) => (
-            <ProjectCard
+            <div
               key={project.id}
-              project={project}
-              openPopup={openPopup}
-            />
+              className="max-w-4xl mx-auto w-full"
+            >
+              <ProjectCard
+                project={project}
+                openPopup={openPopup}
+              />
+            </div>
           ))}
         </div>
       </div>

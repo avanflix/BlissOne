@@ -55,7 +55,7 @@ export default function Footer() {
 
             <div className="flex items-center gap-3">
               <Mail size={18} />
-              <span>info@blissventures.com</span>
+              <span>blissventures.co@gmail.com</span>
             </div>
 
             <div className="flex items-center gap-3">
@@ -71,25 +71,27 @@ export default function Footer() {
 
           <div className="flex gap-4">
             <a
-              href="#"
+              href="https://www.facebook.com/Blissventurespvtltd"
+              target="_blank"
               className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow-500 transition-smooth"
             >
               <FaFacebookF size={20} />
             </a>
 
             <a
-              href="#"
+              href="https://www.instagram.com/blissventures_pvt.ltd/"
+              target="_blank"
               className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow-500 transition-smooth"
             >
               <FaInstagram size={20} />
             </a>
 
-            <a
+            {/* <a
               href="#"
               className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow-500 transition-smooth"
             >
               <FaLinkedinIn size={20} />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

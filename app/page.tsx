@@ -27,7 +27,7 @@ export default function HomePage() {
       />
 
       <About />
-      <WhyChoose />
+      <WhyChoose openPopup={() => setPopupOpen(true)} />
       <Projects openPopup={() => setPopupOpen(true)} />
       <VisionMission />
       <Leadership />

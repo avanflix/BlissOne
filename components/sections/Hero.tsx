@@ -12,9 +12,9 @@ export default function Hero({
     <section id="home" className="bg-white">
       {/* Top Image */}
       <div
-        className="w-full h-[70vh] md:h-[85vh] bg-cover bg-center"
+        className="w-full h-[70vh] md:h-[100vh] bg-cover bg-center"
         style={{
-          backgroundImage: "url('/images/Main.jpg')",
+          backgroundImage: "url('/images/bliss.jpeg')",
         }}
       />
 

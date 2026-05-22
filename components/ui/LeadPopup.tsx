@@ -108,13 +108,13 @@ export default function LeadPopup(
         <div
           className="relative min-h-[300px] bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/projects/project-1.jpg')",
+            backgroundImage: "url('/images/Main.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-black/50" />
 
           <div className="relative z-10 h-full flex flex-col justify-center p-6 text-white">
-            <p className="uppercase tracking-[0.3em] text-xs text-red-300 mb-3">
+            <p className="uppercase tracking-[0.3em] text-xs text-red-800 mb-3">
               Bliss Ventures
             </p>
 

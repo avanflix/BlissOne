@@ -48,7 +48,11 @@ const features = [
   },
 ];
 
-export default function WhyChoose() {
+export default function WhyChoose({
+  openPopup,
+}: {
+  openPopup: () => void;
+}) {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container-width">
@@ -59,7 +63,11 @@ export default function WhyChoose() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <FeatureCard key={index} {...feature} />
+            <FeatureCard
+              key={index}
+              {...feature}
+              openPopup={openPopup}
+            />
           ))}
         </div>
       </div>
