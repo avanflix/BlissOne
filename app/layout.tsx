@@ -38,7 +38,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} antialiased bg-white text-gray-900`}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         <main>{children}</main>
         <Footer />
       </body>

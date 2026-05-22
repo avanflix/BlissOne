@@ -12,7 +12,7 @@ export default function SectionTitle({
   return (
     <div className={`${center ? "text-center" : "text-left"} mb-14`}>
       {subtitle && (
-        <p className="text-sm uppercase tracking-[0.3em] text-gradient mb-3 font-medium">
+        <p className="text-sm uppercase tracking-[0.3em] text-red-700 mb-3 font-medium">
           {subtitle}
         </p>
       )}

@@ -21,21 +21,22 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-smooth ${
-        isScrolled
-          ? "bg-white shadow-md py-4"
-          : "bg-transparent py-6"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-smooth ${isScrolled
+        ? "bg-white shadow-md"
+        : "bg-transparent py-1"
+        }`}
     >
       <div className="container-width flex items-center justify-between">
         {/* Logo */}
         <a
           href="#home"
-          className={`text-2xl font-bold ${
-            isScrolled ? "text-gray-900" : "text-white"
-          }`}
+          className="flex items-center"
         >
-          Bliss Ventures
+          <img
+            src="/logos/b.png"
+            alt="Bliss Ventures Logo"
+            className="h-15 w-auto"
+          />
         </a>
 
         {/* Desktop Menu */}
@@ -44,24 +45,24 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className={`font-medium transition-smooth hover:text-yellow-500 ${
-                isScrolled ? "text-gray-800" : "text-white"
-              }`}
+              className={`font-medium transition-smooth hover:text-yellow-500 ${isScrolled ? "text-gray-800" : "text-white"
+                }`}
             >
               {link.name}
             </a>
           ))}
+          <a href="#contact">
+            <Button variant={isScrolled ? "dark" : "red"}>
+              Book Consultation
+            </Button>
+          </a>
 
-          <Button variant={isScrolled ? "dark" : "gold"}>
-            Book Consultation
-          </Button>
         </nav>
 
         {/* Mobile Toggle */}
         <button
-          className={`md:hidden ${
-            isScrolled ? "text-gray-900" : "text-white"
-          }`}
+          className={`md:hidden ${isScrolled ? "text-gray-900" : "text-white"
+            }`}
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}

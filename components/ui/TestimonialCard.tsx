@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Quote } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 import { Testimonial } from "@/types/testimonial";
 
 interface TestimonialCardProps {
@@ -10,18 +9,18 @@ export default function TestimonialCard({
   testimonial,
 }: TestimonialCardProps) {
   return (
-    <div className="bg-white rounded-3xl p-8 card-shadow border border-gray-100 hover:-translate-y-2 transition-smooth">
-      <div className="flex justify-between items-start mb-6">
-        <div className="relative w-16 h-16 rounded-full overflow-hidden">
-          <Image
-            src={testimonial.image}
-            alt={testimonial.name}
-            fill
-            className="object-cover"
-          />
+    <div className="bg-white rounded-3xl p-8 card-shadow border border-gray-100 hover:-translate-y-2 transition-smooth h-full">
+      <div className="flex justify-between items-center mb-6">
+        <div className="flex gap-1">
+          {[...Array(testimonial.rating)].map((_, index) => (
+            <Star
+              key={index}
+              className="w-5 h-5 fill-red-600 text-red-600"
+            />
+          ))}
         </div>
 
-        <div className="w-12 h-12 gold-gradient rounded-2xl flex items-center justify-center">
+        <div className="w-12 h-12 bg-red-800 rounded-2xl flex items-center justify-center">
           <Quote className="w-5 h-5 text-white" />
         </div>
       </div>

@@ -8,7 +8,7 @@ export default function Leadership() {
         {/* Image */}
         <div className="relative h-[650px] rounded-3xl overflow-hidden">
           <Image
-            src="/images/leadership/founder.jpg"
+            src="/images/TeamImage.png"
             alt="Leadership"
             fill
             className="object-cover"

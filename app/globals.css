@@ -50,6 +50,15 @@ h6 {
   max-width: 1280px;
   margin: 0 auto;
 }
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 .gold-gradient {
   background: linear-gradient(135deg, #c8a96b, #e7d3a8);

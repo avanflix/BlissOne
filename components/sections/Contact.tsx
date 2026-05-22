@@ -52,7 +52,7 @@ export default function Contact() {
             </div>
 
             <div className="md:col-span-2 text-center mt-4">
-              <Button variant="gold" className="px-10">
+              <Button variant="red" className="px-10">
                 Book Site Visit
               </Button>
             </div>

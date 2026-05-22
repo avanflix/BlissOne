@@ -12,7 +12,7 @@ export default function VisionMission() {
         <div className="grid md:grid-cols-2 gap-10">
           {/* Vision */}
           <div className="bg-white p-10 rounded-3xl card-shadow">
-            <h3 className="text-3xl font-bold mb-6 text-gradient">
+            <h3 className="text-3xl font-bold mb-6 text-red-800">
               Our Vision
             </h3>
 
@@ -25,7 +25,7 @@ export default function VisionMission() {
 
           {/* Mission */}
           <div className="bg-white p-10 rounded-3xl card-shadow">
-            <h3 className="text-3xl font-bold mb-6 text-gradient">
+            <h3 className="text-3xl font-bold mb-6 text-red-800">
               Our Mission
             </h3>
 

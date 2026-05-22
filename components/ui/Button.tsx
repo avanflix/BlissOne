@@ -3,18 +3,18 @@ import { cn } from "@/lib/utils";
 
 interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "gold" | "outline" | "dark";
+  variant?: "red" | "outline" | "dark";
   children: React.ReactNode;
 }
 
 export default function Button({
-  variant = "gold",
+  variant = "red",
   children,
   className,
   ...props
 }: ButtonProps) {
   const variants = {
-    gold: "gold-gradient text-white hover:scale-105",
+    red: "bg-red-900 hover:bg-red-800 text-white",
     outline:
       "border border-white text-white hover:bg-white hover:text-gray-900",
     dark: "bg-gray-900 text-white hover:bg-gray-800",

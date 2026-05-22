@@ -5,9 +5,10 @@ import Button from "./Button";
 
 interface ProjectCardProps {
   project: Project;
+  openPopup: () => void;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, openPopup }: ProjectCardProps) {
   return (
     <div className="bg-white rounded-3xl overflow-hidden card-shadow group">
       <div className="relative h-72 overflow-hidden">
@@ -37,7 +38,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.description}
         </p>
 
-        <Button variant="dark">View Project</Button>
+        <Button variant="red" onClick={openPopup}>
+          View Project
+        </Button>
       </div>
     </div>
   );

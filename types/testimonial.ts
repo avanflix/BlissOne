@@ -3,5 +3,5 @@ export interface Testimonial {
   name: string;
   role: string;
   feedback: string;
-  image: string;
+  rating:number;
 }
