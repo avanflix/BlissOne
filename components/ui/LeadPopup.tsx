@@ -38,39 +38,78 @@ export default function LeadPopup(
     });
   };
 
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
-    e.preventDefault();
+const handleSubmit = async (
+  e: React.FormEvent<HTMLFormElement>
+) => {
+  e.preventDefault();
 
-    setLoading(true);
+  setLoading(true);
 
-    try {
-      await emailjs.send(
-        "service_l5sopqp",
-        "template_61jp3dy",
-        formData,
-        "11DtNCtvLVku_U8Rx"
-      );
+  try {
+    const response = await fetch(
+      "https://api.kylas.io/v1/leads/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "api-key":
+            "841597d1-3e1d-4536-b047-43d8350ccd1b:21705",
+        },
+        body: JSON.stringify({
+          ownerId: 81947,
+          lastName: formData.fullName,
+          source: 2913180,
 
-      alert("Inquiry submitted successfully!");
-      
-      setFormData({
-        fullName: "",
-        email: "",
-        countryCode: "+91",
-        phone: "",
-        message: "",
-      });
+          emails: [
+            {
+              type: "OFFICE",
+              value: formData.email,
+              primary: true,
+            },
+          ],
 
-      setOpen(false);
-    } catch (error) {
-      console.error(error);
-      alert("Failed to send inquiry.");
-    } finally {
-      setLoading(false);
+          phoneNumbers: [
+            {
+              type: "MOBILE",
+              code: "IN",
+              primary: true,
+              value: formData.phone,
+            },
+          ],
+
+          customFieldValues: {
+            cfMessage: formData.message,
+          },
+
+          facebook: null,
+          twitter: null,
+          linkedIn: null,
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to submit lead");
     }
-  };
+
+    alert("Inquiry submitted successfully!");
+
+    setFormData({
+      fullName: "",
+      email: "",
+      countryCode: "+91",
+      phone: "",
+      message: "",
+    });
+
+    setOpen(false);
+  } catch (error) {
+    console.error(error);
+    alert("Failed to send inquiry.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div
