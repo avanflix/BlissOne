@@ -4,5 +4,6 @@ export interface Project {
   location: string;
   status: string;
   image: string;
+  images?: string[];
   description: string;
 }

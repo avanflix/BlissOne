@@ -11,8 +11,8 @@ export default function Projects({
     <section id="projects" className="section-padding bg-white">
       <div className="container-width">
         <SectionTitle
-          title=" Project"
-          subtitle="Our Developments"
+          title=" Under Development"
+          subtitle="Our Projects"
         />
 
         <div className="grid lg:grid-cols-1 gap-10">

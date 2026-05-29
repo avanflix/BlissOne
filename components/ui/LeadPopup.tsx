@@ -153,8 +153,8 @@ const handleSubmit = async (
           <div className="absolute inset-0 bg-black/50" />
 
           <div className="relative z-10 h-full flex flex-col justify-center p-6 text-white">
-            <p className="uppercase tracking-[0.3em] text-xs text-red-800 mb-3">
-              Bliss Ventures
+            <p className="text-2xl md:text-2xl uppercase font-bold mb-10">
+              Bliss Ventures Pvt.Ltd
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-4">
