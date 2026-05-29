@@ -81,3 +81,25 @@ h6 {
 .transition-smooth {
   transition: all 0.3s ease;
 }
+
+/* Change all Swiper controls to black */
+.swiper {
+  --swiper-theme-color:  #525252;
+}
+
+/* Navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #525252 !important;
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+  background: #525252  !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #525252  !important;
+  opacity: 1;
+}
