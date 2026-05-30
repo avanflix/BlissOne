@@ -8,9 +8,12 @@ export const projects: Project[] = [
     status: "Ongoing",
     image: "/images/elevation1.png",
     images: [
-      "/images/elevation 1.png",
-      "/images/elevation 2.jpeg",
-      "/images/elevation 4.jpeg",
+      "/images/Img1.jpg",
+      "/images/Img2.jpg",
+      "/images/Img3.jpg",
+      "/images/Img4.jpg",
+      "/images/Img5.jpg",
+      "/images/Img6.jpg",
     ],
     description:
       "Premium residential spaces designed for elevated urban living.",

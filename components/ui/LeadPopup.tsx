@@ -37,8 +37,8 @@ export default function LeadPopup(
       [e.target.name]: e.target.value,
     });
   };
-
-const handleSubmit = async (
+ 
+  const handleSubmit = async (
   e: React.FormEvent<HTMLFormElement>
 ) => {
   e.preventDefault();
@@ -46,50 +46,41 @@ const handleSubmit = async (
   setLoading(true);
 
   try {
+    const leadData = {
+      name: formData.fullName,
+      phone: `${formData.countryCode}${formData.phone}`,
+      email: formData.email,
+      notes: formData.message,
+      source: "Google Ads",
+      config: "",
+      budget: "",
+      quality: "Hot",
+      has_cp: "No",
+      staff: "Website Lead",
+      status: "Completed",
+      purpose: "Google Ads Enquiry",
+      visit_date: new Date().toISOString().split("T")[0],
+      visit_time: "",
+      followup: "Call Tomorrow",
+      location: "",
+    };
+
     const response = await fetch(
-      "https://api.kylas.io/v1/leads/",
+      "https://bliss-site-visit.netlify.app/.netlify/functions/kylas-submit",
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "api-key":
-            "841597d1-3e1d-4536-b047-43d8350ccd1b:21705",
         },
-        body: JSON.stringify({
-          ownerId: 81947,
-          lastName: formData.fullName,
-          source: 2913180,
-
-          emails: [
-            {
-              type: "OFFICE",
-              value: formData.email,
-              primary: true,
-            },
-          ],
-
-          phoneNumbers: [
-            {
-              type: "MOBILE",
-              code: "IN",
-              primary: true,
-              value: formData.phone,
-            },
-          ],
-
-          customFieldValues: {
-            cfMessage: formData.message,
-          },
-
-          facebook: null,
-          twitter: null,
-          linkedIn: null,
-        }),
+        body: JSON.stringify(leadData),
       }
     );
 
     if (!response.ok) {
-      throw new Error("Failed to submit lead");
+      const errorData = await response.json();
+      throw new Error(
+        errorData.message || "Failed to submit lead"
+      );
     }
 
     alert("Inquiry submitted successfully!");
@@ -104,12 +95,13 @@ const handleSubmit = async (
 
     setOpen(false);
   } catch (error) {
-    console.error(error);
+    console.error("Lead submission error:", error);
     alert("Failed to send inquiry.");
   } finally {
     setLoading(false);
   }
 };
+
 
   return (
     <div
