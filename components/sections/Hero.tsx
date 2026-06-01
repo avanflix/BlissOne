@@ -36,9 +36,9 @@ export default function Hero({
         {/* Logo */}
         <div className="absolute top-2 left-1/2 -translate-x-1/2 z-20">
           <img
-            src="/logos/logo.jpeg"
+            src="/logos/logo2.png"
             alt="Bliss One"
-            className="h-15 md:h-16 bg-white rounded-lg p-2"
+            className="h-18 md:h-18 bg-white rounded-lg p-2"
           />
         </div>
 

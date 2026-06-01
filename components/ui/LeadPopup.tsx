@@ -37,70 +37,93 @@ export default function LeadPopup(
       [e.target.name]: e.target.value,
     });
   };
- 
+
   const handleSubmit = async (
-  e: React.FormEvent<HTMLFormElement>
-) => {
-  e.preventDefault();
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
 
-  setLoading(true);
+    setLoading(true);
 
-  try {
-    const leadData = {
-      name: formData.fullName,
-      phone: `${formData.countryCode}${formData.phone}`,
-      email: formData.email,
-      notes: formData.message,
-      source: "Google Ads",
-      config: "",
-      budget: "",
-      quality: "Hot",
-      has_cp: "No",
-      staff: "Website Lead",
-      status: "Completed",
-      purpose: "Google Ads Enquiry",
-      visit_date: new Date().toISOString().split("T")[0],
-      visit_time: "",
-      followup: "Call Tomorrow",
-      location: "",
-    };
+    try {
+      const payload = {
+        ownerId: 81947,
+        lastName: formData.fullName,
+        source: 2913180,
 
-    const response = await fetch(
-      "https://bliss-site-visit.netlify.app/.netlify/functions/kylas-submit",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+        emails: [
+          {
+            type: "OFFICE",
+            value: formData.email,
+            primary: true,
+          },
+        ],
+
+        phoneNumbers: [
+          {
+            type: "MOBILE",
+            code: formData.countryCode === "+91" ? "IN" : "US",
+            primary: true,
+            value: formData.phone,
+          },
+        ],
+
+        customFieldValues: {
+          cfMessage: formData.message,
         },
-        body: JSON.stringify(leadData),
-      }
-    );
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(
-        errorData.message || "Failed to submit lead"
+        facebook: null,
+        twitter: null,
+        linkedIn: null,
+      };
+
+      const response = await fetch(
+        "https://api.kylas.io/v1/leads/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "api-key":
+              "841597d1-3e1d-4536-b047-43d8350ccd1b:21705",
+          },
+          body: JSON.stringify(payload),
+        }
       );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        // Duplicate lead
+        if (data?.code === "002020") {
+          setOpen(false);
+
+          alert(
+            "You have already submitted an enquiry. Our team will contact you shortly."
+          );
+          return;
+        }
+
+        throw new Error(data?.message || "Failed to create lead");
+      }
+
+      alert("Inquiry submitted successfully!");
+
+      setFormData({
+        fullName: "",
+        email: "",
+        countryCode: "+91",
+        phone: "",
+        message: "",
+      });
+
+      setOpen(false);
+    } catch (error) {
+      console.error("Lead submission error:", error);
+      alert("Failed to send inquiry.");
+    } finally {
+      setLoading(false);
     }
-
-    alert("Inquiry submitted successfully!");
-
-    setFormData({
-      fullName: "",
-      email: "",
-      countryCode: "+91",
-      phone: "",
-      message: "",
-    });
-
-    setOpen(false);
-  } catch (error) {
-    console.error("Lead submission error:", error);
-    alert("Failed to send inquiry.");
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
 
   return (

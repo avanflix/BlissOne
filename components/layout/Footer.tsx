@@ -47,20 +47,34 @@ export default function Footer() {
         <div>
           <h4 className="text-xl font-semibold mb-5">Contact</h4>
 
-          <div className="space-y-4 text-gray-400">
-            <div className="flex items-center gap-3">
-              <Phone size={18} />
-              <span>+91 98765 43210</span>
-            </div>
+          <div>
+            <h4 className="text-xl font-semibold mb-5">Contact</h4>
 
-            <div className="flex items-center gap-3">
-              <Mail size={18} />
-              <span>blissventures.co@gmail.com</span>
-            </div>
+            <div className="space-y-4 text-gray-400">
+              <div className="flex items-center gap-3">
+                <Phone size={18} />
+                <a
+                  href="tel:+919876543210"
+                  className="hover:text-white transition-colors"
+                >
+                  +91 98765 43210
+                </a>
+              </div>
 
-            <div className="flex items-center gap-3">
-              <MapPin size={18} />
-              <span>Hyderabad, Telangana</span>
+              <div className="flex items-center gap-3">
+                <Mail size={18} />
+                <a
+                  href="mailto:blissventures.co@gmail.com"
+                  className="hover:text-white transition-colors"
+                >
+                  blissventures.co@gmail.com
+                </a>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <MapPin size={18} />
+                <span>Hyderabad, Telangana</span>
+              </div>
             </div>
           </div>
         </div>
