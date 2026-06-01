@@ -12,12 +12,12 @@ const stats = [
     title: "Units in Bliss One",
     description: "Thoughtfully designed 2 & 3 BHK apartments",
   },
-  {
-    number: 55,
-    suffix: "+",
-    title: "Acres in Bliss Bilva",
-    description: "Master-planned farmland community",
-  },
+  // {
+  //   number: 55,
+  //   suffix: "+",
+  //   title: "Acres in Bliss Bilva",
+  //   description: "Master-planned farmland community",
+  // },
   {
     number: 5,
     suffix: "",
@@ -69,7 +69,7 @@ export default function Leadership() {
         </p>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
           {stats.map((stat, index) => (
             <div
               key={index}

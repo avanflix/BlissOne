@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container-width grid md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand */}
         <div>
-          <h3 className="text-3xl font-bold mb-5">Bliss Ventures</h3>
+          <h3 className="text-3xl font-bold mb-5">Bliss Ventures Private Limited</h3>
 
           <p className="text-gray-400 leading-relaxed">
             Crafting premium living spaces that combine elegance, innovation,
@@ -44,9 +44,6 @@ export default function Footer() {
         </div>
 
         {/* Contact */}
-        <div>
-          <h4 className="text-xl font-semibold mb-5">Contact</h4>
-
           <div>
             <h4 className="text-xl font-semibold mb-5">Contact</h4>
 
@@ -57,7 +54,7 @@ export default function Footer() {
                   href="tel:+919876543210"
                   className="hover:text-white transition-colors"
                 >
-                  +91 98765 43210
+                  +91 98000 14477
                 </a>
               </div>
 
@@ -73,9 +70,15 @@ export default function Footer() {
 
               <div className="flex items-center gap-3">
                 <MapPin size={18} />
-                <span>Hyderabad, Telangana</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Yamnampet+Ghatkesar+Hyderabad+Telangana"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-smooth"
+                >
+                  Yamnampet, Ghatkesar, Hyderabad
+                </a>
               </div>
-            </div>
           </div>
         </div>
 
@@ -87,7 +90,7 @@ export default function Footer() {
             <a
               href="https://www.facebook.com/Blissventurespvtltd"
               target="_blank"
-              className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow-500 transition-smooth"
+              className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-red-800 transition-smooth"
             >
               <FaFacebookF size={20} />
             </a>
@@ -95,24 +98,24 @@ export default function Footer() {
             <a
               href="https://www.instagram.com/blissventures_pvt.ltd/"
               target="_blank"
-              className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow-500 transition-smooth"
+              className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-red-800 transition-smooth"
             >
               <FaInstagram size={20} />
             </a>
-
-            {/* <a
-              href="#"
-              className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow-500 transition-smooth"
+            <a
+              href="https://youtube.com/@blissgroupindiaofficial?si=_Lwi8JjhBi4TptcX"
+              target="_blank"
+              className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-red-800 transition-smooth"
             >
-              <FaLinkedinIn size={20} />
-            </a> */}
+              <FaYoutube size={20} />
+            </a>
           </div>
         </div>
       </div>
 
       {/* Bottom */}
       <div className="container-width border-t border-white/10 mt-12 pt-8 text-center text-gray-500">
-        © 2026 Bliss Ventures. All rights reserved.
+        © 2026 Bliss Ventures Private Limite. All rights reserved.
       </div>
     </footer>
   );

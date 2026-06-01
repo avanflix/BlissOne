@@ -2,7 +2,7 @@
 
 import Button from "../ui/Button";
 import { motion } from "framer-motion";
-
+import { FaCheckCircle } from "react-icons/fa";
 import { Playfair_Display } from "next/font/google";
 
 const playfair = Playfair_Display({
@@ -105,6 +105,22 @@ export default function Hero({
         </div>
       </section>
 
+      <div className="flex flex-wrap justify-center gap-4 mt-8">
+        <div className="flex items-center gap-2 px-4 py-2 bg-white border rounded-full shadow-sm">
+          <FaCheckCircle className="text-red-700" />
+          <span className="font-medium">
+            RERA No: P02200007437
+          </span>
+        </div>
+
+        <div className="flex items-center gap-2 px-4 py-2 bg-white border rounded-full shadow-sm">
+          <FaCheckCircle className="text-red-700" />
+          <span className="font-medium">
+            HMDA Approved
+          </span>
+        </div>
+      </div>
+
       {/* Content Below Image */}
       <motion.div
         initial={{ opacity: 0, y: 80 }}
@@ -121,7 +137,7 @@ export default function Hero({
         </h1>
 
         <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-3xl mx-auto text-gray-600">
-          Bliss Ventures creates thoughtfully designed premium communities that
+          Bliss Ventures Private Limited creates thoughtfully designed premium communities that
           combine modern architecture, strategic locations, and long-term
           investment value.
         </p>

@@ -16,16 +16,76 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Bliss Ventures | Premium Real Estate Development",
+  metadataBase: new URL("https://blissventures/landing"),
+
+  title:
+    "Bliss One Apartments Ghatkesar – Premium 2 & 3 BHK | Bliss Ventures Private Limited",
+
   description:
-    "Bliss Ventures creates premium residential communities with modern architecture, strategic locations, and exceptional investment value.",
+    "Bliss One Apartments – Premium 2 & 3 BHK homes in Ghatkesar, Hyderabad. 3.6 acre gated community, 22,000 sqft clubhouse, 10 mins to ORR Exit-9. RERA No: P02200007437. Book a free site visit today!",
+
   keywords: [
+    "Bliss One Apartments",
+    "Apartments in Ghatkesar",
+    "2 BHK Flats in Ghatkesar",
+    "3 BHK Flats in Ghatkesar",
     "Bliss Ventures",
-    "Real Estate",
-    "Luxury Homes",
-    "Hyderabad Real Estate",
-    "Premium Properties",
+    "Apartments in Hyderabad",
+    "HMDA Approved Apartments",
+    "RERA Approved Apartments",
+    "Ghatkesar Real Estate",
+    "Flats Near ORR Exit 9",
   ],
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title:
+      "Bliss One Apartments Ghatkesar – Premium 2 & 3 BHK | Bliss Ventures Private Limited",
+
+    description:
+      "Premium 2 & 3 BHK homes in Ghatkesar, Hyderabad. 3.6 acre gated community with 22,000 sqft clubhouse and excellent connectivity.",
+
+    url: "https://blissventures/landing",
+    siteName: "Bliss One Apartments",
+    locale: "en_IN",
+    type: "website",
+
+    images: [
+      {
+        url: "/images/bliss2.png",
+        width: 1200,
+        height: 630,
+        alt: "Bliss One Apartments Ghatkesar",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "Bliss One Apartments Ghatkesar – Premium 2 & 3 BHK",
+
+    description:
+      "Premium 2 & 3 BHK homes in Ghatkesar, Hyderabad. Book your free site visit today.",
+
+    images: ["/og-image.jpg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

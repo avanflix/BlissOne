@@ -168,8 +168,8 @@ export default function LeadPopup(
           <div className="absolute inset-0 bg-black/50" />
 
           <div className="relative z-10 h-full flex flex-col justify-center p-6 text-white">
-            <p className="text-2xl md:text-2xl uppercase font-bold mb-10">
-              Bliss Ventures Pvt.Ltd
+            <p className="text-xl md:text-xl uppercase font-bold mb-10">
+              Bliss Ventures Private Limited
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-4">

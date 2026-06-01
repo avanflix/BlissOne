@@ -14,13 +14,13 @@ const features = [
     icon: MapPinned,
     title: "Prime Locations",
     description:
-      "Strategically positioned developments in high-growth investment corridors.",
+      "Near Pocharam IT Hub and East Hyderabad growth corridor with seamless access to Schools, Hospitals, and Major Highways.",
   },
   {
     icon: Building2,
     title: "Modern Architecture",
     description:
-      "Designed with elegance, innovation, and contemporary lifestyle needs.",
+      "Smartly planeed homes designed for modern family living.",
   },
   {
     icon: ShieldCheck,
@@ -32,13 +32,13 @@ const features = [
     icon: Landmark,
     title: "Investment Value",
     description:
-      "Projects designed for long-term appreciation and stable returns.",
+      "A Promising investment destination in Hyderabad's fast-growing eastern corridor.",
   },
   {
     icon: Gem,
     title: "Luxury Living",
     description:
-      "Sophisticated living experiences with premium amenities and finishes.",
+      "Experiance premium amenities, security, and a vibrant community lifestyle.",
   },
   {
     icon: Trees,
@@ -57,8 +57,8 @@ export default function WhyChoose({
     <section className="section-padding bg-gray-50">
       <div className="container-width">
         <SectionTitle
-          title="Why Choose Bliss Ventures"
-          subtitle="Our Strength"
+          title="Bliss Ventures Private Limited"
+          subtitle="Why Choose"
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

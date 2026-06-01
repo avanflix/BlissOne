@@ -8,14 +8,14 @@ export default function About() {
         {/* Content */}
         <div>
           <SectionTitle
-            title="About Bliss Ventures"
+            title="About Bliss Ventures Private Limited"
             subtitle="Who We Are"
             center={false}
           />
 
           <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
             <p>
-              Bliss Ventures is a visionary real estate development company
+              Bliss Ventures Private Limited is a visionary real estate development company
               committed to redefining urban living through thoughtfully crafted
               residential communities.
             </p>

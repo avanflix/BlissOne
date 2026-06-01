@@ -2,7 +2,7 @@ export const COMPANY = {
   name: "Bliss Ventures",
   tagline: "Crafting Exceptional Living Experiences",
   email: "info@blissventures.com",
-  phone: "+91 98765 43210",
+  phone: "+91 98000 14477",
   address: "Hyderabad, Telangana, India",
 };
 

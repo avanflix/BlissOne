@@ -11,9 +11,9 @@ export const projects: Project[] = [
       "/images/Img1.jpg",
       "/images/Img2.jpg",
       "/images/Img3.jpg",
-      "/images/Img4.jpg",
+      "/images/Img7.jpg",
       "/images/Img5.jpg",
-      "/images/Img6.jpg",
+      "/images/ClubHouseNight.jpg"
     ],
     description:
       "Premium residential spaces designed for elevated urban living.",
