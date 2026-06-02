@@ -41,7 +41,7 @@ export default function About() {
         {/* Image */}
         <div className="relative h-[600px] w-[auto] rounded-2xl overflow-hidden">
           <Image
-            src="/images/About.jpeg"
+            src="/images/ClubHouseNight.jpg"
             loading="eager"
             alt="About Bliss Ventures"
             fill

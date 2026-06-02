@@ -20,13 +20,13 @@ const features = [
     icon: Building2,
     title: "Modern Architecture",
     description:
-      "Smartly planeed homes designed for modern family living.",
+      "Smartly planned homes designed for modern family living.",
   },
   {
     icon: ShieldCheck,
     title: "Trusted Transparency",
     description:
-      "Clear processes, trustworthy transactions, and customer confidence.",
+      "Clear process, trustworthy transactions, and customer confidence.",
   },
   {
     icon: Landmark,

@@ -51,7 +51,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Phone size={18} />
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919800014477"
                   className="hover:text-white transition-colors"
                 >
                   +91 98000 14477
@@ -71,7 +71,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <MapPin size={18} />
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=Yamnampet+Ghatkesar+Hyderabad+Telangana"
+                  href="https://www.google.com/maps/place/Bliss+One+Apartments+-+Gated+Community/@17.4513633,78.6543323,1254m/data=!3m1!1e3!4m6!3m5!1s0x3bcb77529327f749:0x43bc67fbdd22b4a9!8m2!3d17.451364!4d78.6572372!16s%2Fg%2F11stttvwlz?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-smooth"
