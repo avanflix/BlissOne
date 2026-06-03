@@ -42,7 +42,7 @@ export default function Hero({
           />
         </div>
 
-        <div className="absolute top-[10%] left-0 w-full z-20 px-16 ">
+        <div className="hidden md:block absolute top-[10%] left-0 w-full z-20 px-16">
           <div className="flex items-center justify-between">
 
             {/* Left */}
@@ -101,6 +101,68 @@ export default function Hero({
               </div>
             </div>
 
+          </div>
+
+        </div>
+        <div className="md:hidden absolute inset-0 z-20 flex flex-col justify-center items-center text-center px-6">
+          <h2
+            className={`${playfair.className} text-red-500 text-lg italic font-semibold`}
+          >
+            Boundless Luxury
+          </h2>
+
+          <p
+            className={`${playfair.className} text-white text-base italic mb-6`}
+          >
+            for Everyone
+          </p>
+
+          <div className="w-20 h-[1px] bg-white/70 mb-6" />
+
+          <h1
+            className={`${playfair.className} text-white text-3xl italic leading-tight`}
+          >
+            Your Bliss
+          </h1>
+
+          <h1
+            className={`${playfair.className} text-white text-3xl italic leading-tight`}
+          >
+            Our Passion
+          </h1>
+
+          <h2
+            className={`${playfair.className} text-red-500 text-xl italic mt-2`}
+          >
+            Feels Good
+          </h2>
+
+          <div className="w-20 h-[1px] bg-white/70 my-6" />
+
+          <div className="space-y-2">
+            <p
+              className={`${playfair.className} text-white text-base italic`}
+            >
+              2 & 3 BHK Apartments
+            </p>
+
+            <p
+              className={`${playfair.className} text-white text-base italic`}
+            >
+              C + G + 5 Floors
+            </p>
+
+            <p
+              className={`${playfair.className} text-white text-base italic`}
+            >
+              25+ Amenities
+            </p>
+
+            <p
+              className={`${playfair.className} text-red-400 text-sm italic`}
+            >
+              📍 Yamnampet, Ghatkesar
+            </p>
           </div>
         </div>
       </section>

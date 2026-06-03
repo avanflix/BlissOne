@@ -15,7 +15,7 @@ export default function Projects({
           subtitle="Our Projects"
         />
 
-        <div className="grid lg:grid-cols-1 gap-10">
+        <div className="space-y-6 lg:space-y-10">
           {projects.map((project) => (
             <div
               key={project.id}

@@ -30,11 +30,11 @@ export default function ProjectCard({ project, openPopup }: ProjectCardProps) {
           pagination={{ clickable: true }}
           navigation
           loop={true}
-          className="h-[450px]"
+          className="h-[240px] sm:h-[320px] lg:h-[450px]"
         >
           {project.images?.map((img, index) => (
             <SwiperSlide key={index}>
-              <div className="relative h-[450px]">
+              <div className="relative h-[240px] sm:h-[320px] lg:h-[450px]">
                 <Image
                   src={img}
                   alt={`${project.title}-${index}`}
@@ -47,9 +47,9 @@ export default function ProjectCard({ project, openPopup }: ProjectCardProps) {
         </Swiper>
       </div>
 
-      <div className="p-8">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-2xl font-semibold">{project.title}</h3>
+      <div className="p-4 sm:p-6 lg:p-8">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+          <h3 className="text-xl sm:text-2xl font-semibold">{project.title}</h3>
 
           <span className="px-4 py-1 bg-gray-100 rounded-full text-sm">
             {project.status}
@@ -61,11 +61,15 @@ export default function ProjectCard({ project, openPopup }: ProjectCardProps) {
           {project.location}
         </div>
 
-        <p className="text-gray-600 leading-relaxed mb-6">
+        <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-5">
           {project.description}
         </p>
 
-        <Button variant="red" onClick={openPopup}>
+        <Button
+          variant="red"
+          onClick={openPopup}
+          className="w-full sm:w-auto"
+        >
           View Project
         </Button>
       </div>
