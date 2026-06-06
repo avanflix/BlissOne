@@ -32,19 +32,19 @@ const features = [
     icon: Landmark,
     title: "Investment Value",
     description:
-      "A Promising investment destination in Hyderabad's fast-growing eastern corridor.",
+      "A Promising investment destination in Hyderabad's fast-growing east corridor.",
   },
   {
     icon: Gem,
     title: "Luxury Living",
     description:
-      "Experiance premium amenities, security, and a vibrant community lifestyle.",
+      "Experience premium amenities, security, and a vibrant community lifestyle.",
   },
   {
     icon: Trees,
     title: "Sustainable Development",
     description:
-      "Responsible design focused on greener and future-ready communities.",
+      "Responsible design focused on greenery and future-ready communities.",
   },
 ];
 
