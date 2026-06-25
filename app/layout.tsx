@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     description:
       "Premium 2 & 3 BHK homes in Ghatkesar, Hyderabad. 3.6 acre gated community with 22,000 sqft clubhouse and excellent connectivity.",
 
-    url: "https://blissventures/landing",
+    url: "https://blissventures.in/landing",
     siteName: "Bliss One Apartments",
     locale: "en_IN",
     type: "website",
