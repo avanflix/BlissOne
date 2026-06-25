@@ -106,6 +106,14 @@ export default function LeadPopup(
         throw new Error(data?.message || "Failed to create lead");
       }
 
+      // Fire GTM Custom Event
+      if (typeof window !== "undefined") {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "generate_lead",
+        });
+      }
+
       alert("Inquiry submitted successfully!");
 
       setFormData({
