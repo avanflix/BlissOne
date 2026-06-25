@@ -136,6 +136,67 @@ export default function RootLayout({
          `}
         </Script>
 
+        <Script id="gtm" strategy="afterInteractive">
+          {`
+      (function(w,d,s,l,i){w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-TKW7C63Z');
+    `}
+        </Script>
+
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TKW7C63Z"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
+        {/* Google Ads */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18134460342"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+
+      gtag('js', new Date());
+      gtag('config', 'AW-18134460342');
+    `}
+        </Script>
+
+        <Script id="google-ads-helper" strategy="afterInteractive">
+          {`
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === 'string') {
+            window.location = url;
+          }
+        };
+
+        gtag('event', 'ads_conversion_Contact_Us_1', {
+          event_callback: callback,
+          event_timeout: 2000,
+        });
+
+        return false;
+      }
+
+      window.gtagSendEvent = gtagSendEvent;
+    `}
+        </Script>
+
         {/* <Navbar /> */}
         <main>{children}</main>
         <Footer />
