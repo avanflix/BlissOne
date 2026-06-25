@@ -115,6 +115,27 @@ export default function RootLayout({
           `}
         </Script>
 
+        <Script id="google-ads-event-helper" strategy="afterInteractive">
+          {`
+           function gtagSendEvent(url) {
+             var callback = function () {
+               if (typeof url === 'string') {
+                 window.location = url;
+               }
+             };
+       
+             gtag('event', 'ads_conversion_Contact_Us_1', {
+               event_callback: callback,
+               event_timeout: 2000,
+             });
+       
+             return false;
+           }
+       
+           window.gtagSendEvent = gtagSendEvent;
+         `}
+        </Script>
+
         {/* <Navbar /> */}
         <main>{children}</main>
         <Footer />
